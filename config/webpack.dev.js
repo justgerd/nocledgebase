@@ -8,5 +8,10 @@ module.exports = merge(common, {
     devServer: {
         static: 'dist/',
         hot: true
-    }
+    },
+    resolve: {
+        alias: {
+            'inferno': 'inferno/dist/index.dev.esm.js',
+        },
+    },
 });

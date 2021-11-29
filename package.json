@@ -15,6 +15,7 @@
     "babel-plugin-inferno": "^6.3.0",
     "babel-preset-env": "^1.7.0",
     "babel-runtime": "^6.26.0",
+    "css-loader": "^6.5.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "less": "^4.1.2",
@@ -30,6 +31,8 @@
   },
   "dependencies": {
     "inferno": "^7.4.11",
-    "inferno-component": "^7.4.11"
-  }
+    "inferno-component": "^7.4.11",
+    "inferno-devtools": "^7.4.11"
+  },
+  "packageManager": "yarn@3.1.0"
 }
