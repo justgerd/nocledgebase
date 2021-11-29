@@ -1,7 +1,7 @@
-import { render } from 'inferno';
+import { render } from 'inferno'
+import { initDevTools } from 'inferno-devtools'
+import { App } from "./components/App.jsx"
 
-function HelloWorld(props) {
-	return(<div>Hello World!</div>)
-}
+initDevTools()
 
-render(<HelloWorld />, document.getElementById('app'));
+render(<App />, document.getElementById('app'))

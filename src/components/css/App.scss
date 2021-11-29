@@ -1,0 +1,29 @@
+@use "colors";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.app {
+  &.container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 6fr 2fr;
+    grid-template-rows: auto 9fr;
+  }
+
+  .menu {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 1;
+    background-color: colors.$cyan500;
+
+    h1 {
+      color: colors.$white;
+      font-size: 24px;
+      padding-left: 12px;
+    }
+  }
+}
