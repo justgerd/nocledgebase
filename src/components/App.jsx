@@ -33,7 +33,7 @@ export class App extends Component {
           <div class="menu">
             <h1>NOCledgeBase</h1>
           </div>
-          <Search elements={Object.keys(this.state.data)} selection={this.state.selection} onSelection={(newSelection) => this.updateSelection(newSelection)} />
+          <Search elements={this.state.data} selection={this.state.selection} onSelection={(newSelection) => this.updateSelection(newSelection)} />
           <Hierarchy data={this.state.data} selection={this.state.selection} onSelection={(newSelection) => this.updateSelection(newSelection)} />
           <Inspector data={this.state.data} selection={this.state.selection} />
         </div>

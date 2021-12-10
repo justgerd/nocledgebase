@@ -29,9 +29,11 @@ export class Search extends Component {
   }
 
   render() {
-    let matches = this.props.elements.filter(e => e.toLowerCase().includes(this.state.filter.toLowerCase()))
-    if (matches.length == 1 && this.state.hasSelected != matches[0]) {
-      this.select(matches[0])
+    let matches = this.props.elements.filter(
+      e => (e.name + " " + e.long).toLowerCase().includes(this.state.filter.toLowerCase())
+    ).sort((a, b) => a.name > b.name)
+    if (matches.length == 1 && this.state.hasSelected != matches[0].name) {
+      this.select(matches[0].name)
     }
     return (
       <div class="search">
@@ -46,7 +48,7 @@ export class Search extends Component {
         />
         <select class="elements" onInput={(e) => this.select(e.target.value)} size="2">
           <option disabled>Element auswählen...</option>
-          { matches.map(e => (<option value={e} selected={this.state.hasSelected == e}>{e}</option>)) }
+          { matches.map(e => (<option value={e.name} selected={this.state.hasSelected == e.name}>{e.name} ({e.long})</option>)) }
         </select>
       </div>
     )
