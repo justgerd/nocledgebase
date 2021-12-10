@@ -9,8 +9,10 @@ export class App extends Component {
   constructor(props) {
     super(props)
 
+    let hashmatch = window.location.hash.match("\#\/(.*)")
+
     this.state = {
-      selection: ""
+      selection: hashmatch ? hashmatch[1] : null
     }
 
     fetch("data.json")
@@ -21,6 +23,7 @@ export class App extends Component {
 
   updateSelection(newSelection) {
     this.setState({ selection: newSelection })
+    window.location = "#/" + newSelection
   }
 
   render() {
@@ -30,9 +33,9 @@ export class App extends Component {
           <div class="menu">
             <h1>NOCledgeBase</h1>
           </div>
-          <Search list={Object.keys(this.state.data)} onSelection={(newSelection) => this.updateSelection(newSelection)} />
+          <Search elements={Object.keys(this.state.data)} selection={this.state.selection} onSelection={(newSelection) => this.updateSelection(newSelection)} />
           <Hierarchy data={this.state.data} selection={this.state.selection} onSelection={(newSelection) => this.updateSelection(newSelection)} />
-          <Inspector data={this.state.data[this.state.selection]} />
+          <Inspector data={this.state.data} selection={this.state.selection} />
         </div>
       )
     } else {
