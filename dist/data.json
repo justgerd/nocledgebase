@@ -1,5 +1,6 @@
 [
-  {"name": "MSC", "long": "Mobile Switching Center", "type": "MSC", "parent": ""},
+  {"name": "MSC", "long": "Mobile Switching Center", "type": "MSC", "parent": "", "responsible": "NSS",
+   "detail": "Bacon ipsum dolor amet tenderloin biltong pig strip steak jowl tongue. Porchetta jerky chicken, biltong filet mignon corned beef flank t-bone bacon. Capicola shoulder fatback bresaola cow pork belly, ham beef ribs kevin brisket kielbasa burgdoggen meatloaf bacon. Drumstick fatback jerky cow, salami venison chislic turkey chuck."},
 
   {"name": "VLR", "long": "Visitor Location Register", "type": "MSC", "parent": "MSC"},
   {"name": "HLR", "long": "Home Location Register", "type": "MSC", "parent": "MSC"},

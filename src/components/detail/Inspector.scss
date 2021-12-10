@@ -1,0 +1,15 @@
+.inspector {
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    th, td {
+      border: 1px solid black;
+    }
+    td:first-child {
+      width: 40%;
+    }
+    td:not(:first-child) {
+      text-align: center;
+    }
+  }
+}

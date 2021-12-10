@@ -8,7 +8,7 @@ function Tree(data, { // data is either tabular (array of objects) or hierarchy 
   children, // if hierarchical data, given a d in data, returns its children
   tree = d3.tree, // layout algorithm (typically d3.tree or d3.cluster)
   sort, // how to sort nodes prior to layout (e.g., (a, b) => d3.descending(a.height, b.height))
-  label = d => d.data.long, // given a node d, returns the display name
+  label = d => d.data.name, // given a node d, returns the display name
   title, // given a node d, returns its hover text
   link, // given a node d, its link (if any)
   linkTarget = "_blank", // the target attribute for links (if any)
