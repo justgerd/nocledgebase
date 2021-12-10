@@ -1,0 +1,11 @@
+[
+  {"name": "MSC", "long": "Mobile Switching Center", "type": "MSC", "parent": ""},
+
+  {"name": "VLR", "long": "Visitor Location Register", "type": "MSC", "parent": "MSC"},
+  {"name": "HLR", "long": "Home Location Register", "type": "MSC", "parent": "MSC"},
+  {"name": "IN", "long": "Intelligent Network", "type": "MSC", "parent": "MSC"},
+  {"name": "BBRC", "long": "Blackbox Recording Center", "type": "MSC", "parent": "MSC"},
+
+  {"name": "MGW", "long": "Media Gateway", "type": "NSS", "parent": "MSC"},
+  {"name": "BSC", "long": "Base Station Controller", "type": "BSS", "parent": "MGW"}
+]
