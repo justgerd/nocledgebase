@@ -7,5 +7,7 @@
   {"name": "BBRC", "long": "Blackbox Recording Center", "type": "MSC", "parent": "MSC"},
 
   {"name": "MGW", "long": "Media Gateway", "type": "NSS", "parent": "MSC"},
-  {"name": "BSC", "long": "Base Station Controller", "type": "BSS", "parent": "MGW"}
+  {"name": "BSC", "long": "Base Station Controller", "type": "BSS", "parent": "MGW"},
+  {"name": "FST", "long": "Foo ST", "type": "BSS", "parent": "MGW"},
+  {"name": "BTS", "long": "Base Transceiver Station", "type": "BSS", "parent": "BSC"}
 ]

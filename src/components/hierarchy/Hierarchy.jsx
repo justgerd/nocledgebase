@@ -109,9 +109,8 @@ function Tree(data, { // data is either tabular (array of objects) or hierarchy 
 }
 
 export function Hierarchy(props) {
-  let root = d3.stratify().id(d => d.name).parentId(d => d.parent)(props.data).find(e => e.id == props.selection)
+  let root = d3.stratify().id(d => d.name).parentId(d => d.parent)(props.data).find(e => props.selection ? e.id == props.selection : true)
   const tree = Tree(root)
-  console.log(tree)
   return (
     <div class="hierarchy">
       <svg
