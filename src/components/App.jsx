@@ -35,7 +35,7 @@ export class App extends Component {
           </div>
           <Search elements={this.state.data} selection={this.state.selection} onSelection={(newSelection) => this.updateSelection(newSelection)} />
           <Hierarchy data={this.state.data} selection={this.state.selection} onSelection={(newSelection) => this.updateSelection(newSelection)} />
-          <Inspector data={this.state.data} selection={this.state.selection} />
+          <Inspector data={this.state.data} selection={this.state.selection} onSelection={(newSelection) => this.updateSelection(newSelection)} />
         </div>
       )
     } else {

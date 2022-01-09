@@ -47,7 +47,8 @@ export class Search extends Component {
           ref={input => this.searchInput = input}
         />
         <select class="elements" onInput={(e) => this.select(e.target.value)} size="2">
-          <option disabled>Element auswählen...</option>
+          { (matches.length == 0) ? <option disabled>Kein Element gefunden</option> :
+            ((!this.state.hasSelected) ? <option disabled>Element auswählen...</option> : null) }
           { matches.map(e => (<option value={e.name} selected={this.state.hasSelected == e.name}>{e.name} ({e.long})</option>)) }
         </select>
       </div>
