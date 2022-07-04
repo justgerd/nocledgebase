@@ -10,7 +10,7 @@ function Tree(data, { // data is either tabular (array of objects) or hierarchy 
   sort, // how to sort nodes prior to layout (e.g., (a, b) => d3.descending(a.height, b.height))
   label = d => d.data.name, // given a node d, returns the display name
   title, // given a node d, returns its hover text
-  link, // given a node d, its link (if any)
+  link = d => "#/" + d.data.name, // given a node d, its link (if any)
   linkTarget = "_blank", // the target attribute for links (if any)
   width = 640, // outer width, in pixels
   height, // outer height, in pixels
@@ -85,7 +85,8 @@ function Tree(data, { // data is either tabular (array of objects) or hierarchy 
     .data(root.descendants())
     .join("a")
       .attr("xlink:href", link == null ? null : d => link(d.data, d))
-      .attr("target", link == null ? null : linkTarget)
+      .attr("xlink:show", "replace")
+      .attr("target", "_top")
       .attr("transform", d => `translate(${d.y},${d.x})`);
 
   node.append("circle")

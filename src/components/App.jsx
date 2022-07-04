@@ -10,10 +10,15 @@ export class App extends Component {
   constructor(props) {
     super(props)
 
-    let hashmatch = window.location.hash.match("\#\/(.*)")
+    let hash= window.location.hash.match("\#\/(.*)")
 
     this.state = {
-      selection: hashmatch ? hashmatch[1] : null
+      selection: hash? hash[1] : ""
+    }
+
+    window.onhashchange = (e) => {
+      let hash = e.newURL.match("\#\/(.*)")
+      this.setState({ selection: hash ? hash[1] : "" })
     }
 
     fetch("data.csv")
@@ -31,19 +36,27 @@ export class App extends Component {
 
   updateSelection(newSelection) {
     this.setState({ selection: newSelection })
-    window.location = "#/" + newSelection
+    if(newSelection)
+      window.location = "#/" + newSelection
   }
 
   render() {
     if (this.state.data) {
+      let hasChildren = this.state.data.filter(e => e.parent === this.state.selection).length
       return (
         <div class="app container">
           <div class="menu">
             <h1>NOCledgeBase</h1>
           </div>
-          <Search elements={this.state.data} selection={this.state.selection} onSelection={(newSelection) => this.updateSelection(newSelection)} />
-          <Hierarchy data={this.state.data} selection={this.state.selection} onSelection={(newSelection) => this.updateSelection(newSelection)} />
-          <Inspector data={this.state.data} selection={this.state.selection} onSelection={(newSelection) => this.updateSelection(newSelection)} />
+          <div class="ui">
+            <Search elements={this.state.data} selection={this.state.selection} onSelection={(newSelection) => this.updateSelection(newSelection)} />
+            {
+              hasChildren ?
+                <Hierarchy data={this.state.data} selection={this.state.selection} />
+              : null
+            }
+            <Inspector data={this.state.data} selection={this.state.selection} />
+          </div>
         </div>
       )
     } else {

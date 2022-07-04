@@ -12,8 +12,23 @@
       text-align: center;
     }
   }
+
+  .info {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
   img {
     width: 90%;
     padding: 8px;
+    margin: 0 auto;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  &.wide {
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
   }
 }
