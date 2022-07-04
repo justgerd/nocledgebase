@@ -43,6 +43,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-preset-env", "npm:1.7.0"],
             ["babel-runtime", "npm:6.26.0"],
             ["css-loader", "virtual:635d24610e196ac5d998ca1990173134eaa66b209404419aff369ba5e0e8549e177093161d8a59c45a94b61696a0a240b28c4a0db5d15beb546ec092912c1824#npm:6.5.1"],
+            ["csv", "npm:6.1.5"],
+            ["csv-parse", "npm:5.2.2"],
             ["d3", "npm:7.2.0"],
             ["file-loader", "virtual:635d24610e196ac5d998ca1990173134eaa66b209404419aff369ba5e0e8549e177093161d8a59c45a94b61696a0a240b28c4a0db5d15beb546ec092912c1824#npm:6.2.0"],
             ["html-webpack-plugin", "virtual:635d24610e196ac5d998ca1990173134eaa66b209404419aff369ba5e0e8549e177093161d8a59c45a94b61696a0a240b28c4a0db5d15beb546ec092912c1824#npm:5.5.0"],
@@ -4270,6 +4272,46 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["csv", [
+        ["npm:6.1.5", {
+          "packageLocation": "./.yarn/cache/csv-npm-6.1.5-0d55e7d052-8052f37db5.zip/node_modules/csv/",
+          "packageDependencies": [
+            ["csv", "npm:6.1.5"],
+            ["csv-generate", "npm:4.1.0"],
+            ["csv-parse", "npm:5.2.2"],
+            ["csv-stringify", "npm:6.1.3"],
+            ["stream-transform", "npm:3.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["csv-generate", [
+        ["npm:4.1.0", {
+          "packageLocation": "./.yarn/cache/csv-generate-npm-4.1.0-cc3338c1f9-42167b0d48.zip/node_modules/csv-generate/",
+          "packageDependencies": [
+            ["csv-generate", "npm:4.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["csv-parse", [
+        ["npm:5.2.2", {
+          "packageLocation": "./.yarn/cache/csv-parse-npm-5.2.2-db01eca0ea-ef84d0813d.zip/node_modules/csv-parse/",
+          "packageDependencies": [
+            ["csv-parse", "npm:5.2.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["csv-stringify", [
+        ["npm:6.1.3", {
+          "packageLocation": "./.yarn/cache/csv-stringify-npm-6.1.3-9aefabc727-bf31b1047b.zip/node_modules/csv-stringify/",
+          "packageDependencies": [
+            ["csv-stringify", "npm:6.1.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["d3", [
         ["npm:7.2.0", {
           "packageLocation": "./.yarn/cache/d3-npm-7.2.0-fad16524dc-fc1529477b.zip/node_modules/d3/",
@@ -6959,6 +7001,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-preset-env", "npm:1.7.0"],
             ["babel-runtime", "npm:6.26.0"],
             ["css-loader", "virtual:635d24610e196ac5d998ca1990173134eaa66b209404419aff369ba5e0e8549e177093161d8a59c45a94b61696a0a240b28c4a0db5d15beb546ec092912c1824#npm:6.5.1"],
+            ["csv", "npm:6.1.5"],
+            ["csv-parse", "npm:5.2.2"],
             ["d3", "npm:7.2.0"],
             ["file-loader", "virtual:635d24610e196ac5d998ca1990173134eaa66b209404419aff369ba5e0e8549e177093161d8a59c45a94b61696a0a240b28c4a0db5d15beb546ec092912c1824#npm:6.2.0"],
             ["html-webpack-plugin", "virtual:635d24610e196ac5d998ca1990173134eaa66b209404419aff369ba5e0e8549e177093161d8a59c45a94b61696a0a240b28c4a0db5d15beb546ec092912c1824#npm:5.5.0"],
@@ -8467,6 +8511,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/statuses-npm-1.5.0-f88f91b2e9-c469b9519d.zip/node_modules/statuses/",
           "packageDependencies": [
             ["statuses", "npm:1.5.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["stream-transform", [
+        ["npm:3.1.0", {
+          "packageLocation": "./.yarn/cache/stream-transform-npm-3.1.0-32f62c59b1-c807269f98.zip/node_modules/stream-transform/",
+          "packageDependencies": [
+            ["stream-transform", "npm:3.1.0"]
           ],
           "linkType": "HARD",
         }]

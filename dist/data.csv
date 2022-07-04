@@ -1,0 +1,3 @@
+﻿name,long,type,parent,image,detail,Zuständigkeit,Standorte
+MSC,Mobile-Services Switching Center,MSC,,/img/bbrc.png,Vermittlungsstelle im GSM-R-Netz. Zentrales Element des NSS-Bereichs.,NSS,"Berlin, Frankfurt"
+VLR,Visitor Location Register,MSC,MSC,/img/bbrc.png,"Eine Datenbank in der MSC, die Informationen über alle an dieser MSC angemeldeten Teilnehmer enthält.",NSS,MSC-Standorte

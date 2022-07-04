@@ -2987,6 +2987,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"csv-generate@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "csv-generate@npm:4.1.0"
+  checksum: 42167b0d48390caeecd99e659e7b0c66ca761587fe618f0ddd2a53b7715d52b2c5c3f4a2ad5b251d25e5001dfc195878d6c7c6dfcab1cf1fdf365017deb2f406
+  languageName: node
+  linkType: hard
+
+"csv-parse@npm:^5.2.2":
+  version: 5.2.2
+  resolution: "csv-parse@npm:5.2.2"
+  checksum: ef84d0813daa775fab8d817123f5ea5d9689de528b5431c6cd5c45251186f1055af519aadb4280eab97e588b2536de5a1c78e2118b0698f98fb2449495c80fa9
+  languageName: node
+  linkType: hard
+
+"csv-stringify@npm:^6.1.3":
+  version: 6.1.3
+  resolution: "csv-stringify@npm:6.1.3"
+  checksum: bf31b1047b3b5d7fa290fc5eadadc6a1dab9a4cce73bd79d536d6fe539f8126b2993a2c2d4d4a0a1447b8657bc463a52378c5821a0956f565c93c458e0304025
+  languageName: node
+  linkType: hard
+
+"csv@npm:^6.1.5":
+  version: 6.1.5
+  resolution: "csv@npm:6.1.5"
+  dependencies:
+    csv-generate: ^4.1.0
+    csv-parse: ^5.2.2
+    csv-stringify: ^6.1.3
+    stream-transform: ^3.1.0
+  checksum: 8052f37db5cc07b5033799380329286d96d523ec40e1cd50abe97373b7db4401254890dcf761ee418bc9f58baff73608434fe5a654c699f188148c7d9a5b1acb
+  languageName: node
+  linkType: hard
+
 "d3-array@npm:2 - 3, d3-array@npm:2.10.0 - 3, d3-array@npm:2.5.0 - 3, d3-array@npm:3":
   version: 3.1.1
   resolution: "d3-array@npm:3.1.1"
@@ -5320,6 +5353,8 @@ __metadata:
     babel-preset-env: ^1.7.0
     babel-runtime: ^6.26.0
     css-loader: ^6.5.1
+    csv: ^6.1.5
+    csv-parse: ^5.2.2
     d3: ^7.2.0
     file-loader: ^6.2.0
     html-webpack-plugin: ^5.5.0
@@ -6616,6 +6651,13 @@ __metadata:
   version: 1.5.0
   resolution: "statuses@npm:1.5.0"
   checksum: c469b9519de16a4bb19600205cffb39ee471a5f17b82589757ca7bd40a8d92ebb6ed9f98b5a540c5d302ccbc78f15dc03cc0280dd6e00df1335568a5d5758a5c
+  languageName: node
+  linkType: hard
+
+"stream-transform@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "stream-transform@npm:3.1.0"
+  checksum: c807269f980081ed6c76e72c7e1d0f7ac60d2dffd4f9298ff51abab32cc10007b545dcc5d6cfd5fd98648b00c4b829480fcc7e70837286c5665095d5b51009ec
   languageName: node
   linkType: hard
 
